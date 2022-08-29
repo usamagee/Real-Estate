@@ -1,0 +1,19 @@
+.inputBox > span{
+    font-family: "Roboto";
+    animation: sliding 3s linear infinite;
+    display: block;
+}
+@keyframes sliding{
+    0%{
+      transform: translateX(-70%);
+    }
+    100%{
+      transform: translateX(200%);
+    }
+  }
+
+  .background{
+     background-color: #3078BF;
+  }
+
+
