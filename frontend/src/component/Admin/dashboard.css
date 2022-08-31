@@ -1,9 +1,9 @@
-.dashboard {
-    /* width: 100vw;
+/* .dashboard {
+    width: 100%;
     max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    position: absolute; */
+    position: absolute;
   }
   
   .dashboardContainer {
@@ -94,4 +94,4 @@
       margin: 1rem;
       font: 300 0.9rem "Roboto";
     }
-  }
+  } */

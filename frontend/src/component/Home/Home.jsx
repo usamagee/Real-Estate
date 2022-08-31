@@ -13,8 +13,10 @@ import BottomTab from "../../more/BottomTab";
 import Loading from "../../more/Loader";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { Link } from "react-router-dom";
+import AddIcon from "@material-ui/icons/Add";
 const Home = () => {
+  const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const { products,error,loading } = useSelector(
     (state) => state.products
@@ -52,7 +54,7 @@ const Home = () => {
                  fontFamily: "Segoe Script",
                  fontSize: "3em",
                  fontWeight:"500"
-               }}>Buy & </h2>
+               }}>{user.name}</h2>
                <span style={{
                  padding:"10px",
                  backgroundColor:"#fff",
@@ -67,7 +69,7 @@ const Home = () => {
                  justifyContent:"center",
                  lineHeight:".7",
                  alignItems:"center"
-               }}>Get</span>
+               }}>Add</span>
                </div>
                <div>
                  <h2 style={{
@@ -99,7 +101,7 @@ const Home = () => {
                  </h2>
                </div>
                <div>
-                 <a href="#container">
+                 <Link to="/admin/product">
                  <button type="submit" style={{
                    width:"135px",
                    height:"50px",
@@ -110,9 +112,9 @@ const Home = () => {
                    color:"#fff",
                    cursor:"pointer"
                  }}
-                 className="Home__button"
-                 >SHOP NOW</button>
-                 </a>
+                 className="Home__button" style={{display:'flex',alignItems:'center' ,background:"#3BB77E", paddingTop:'5px',padding:"10px", width:"120px", borderRadius:"3px"}}
+                 > <  AddIcon />Product</button>
+                 </Link>
                </div>
              </div>
          </div>

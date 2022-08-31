@@ -92,7 +92,7 @@ const CreateProduct = ({ history }) => {
   return (
     <Fragment>
       <MetaData title="Create Product" />
-      <div className="dashboard">
+      <div >
         {/* <SideBar /> */}
         <div className="newProductContainer">
           <form
